@@ -2,7 +2,7 @@
 
 ## 📖 Description
 
-**gestionutilisateurs** est une application console C# développée from scratch natif permettant la gestion des utilisateurs (CRUD) avec stockage temporaire en mémoire via une collection `List<Users>`.
+**gestionutilisateurs** est une application console C# développée from scratch permettant la gestion des utilisateurs (CRUD) avec stockage temporaire en mémoire via une collection `List<Users>`.
 
 Cette application repose sur une architecture en couches sans framework externe, favorisant une séparation claire des responsabilités.
 
