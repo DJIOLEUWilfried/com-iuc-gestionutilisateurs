@@ -1,24 +1,29 @@
-📖 Description
-gestionutilisateurs est une application console en C# natif développée from scratch pour la gestion des utilisateurs(CRUD) avec stockage temporaire des données en mémoire via une collection List<T>.
-Elle illustre une architecture en couches (Controller, Service, Repository, Model, Exception, View) sans framework externe, avec une séparation claire des responsabilités.
-Ce projet a été réalisé dans un cadre académique dans le but de pratiquer l’architecture propre, la gestion des données et les bonnes pratiques de développement.
+# 📌 gestionutilisateurs
 
-Ce dernier met l’accent sur :
+## 📖 Description
 
-La Programmation Orientée Objet (POO)
+**gestionutilisateurs** est une application console développée en C# natif permettant la gestion des utilisateurs (CRUD) avec stockage temporaire en mémoire via une collection `List<Users>`.
 
-La manipulation des collections
+Cette application repose sur une architecture en couches sans framework externe, favorisant une séparation claire des responsabilités.
 
-La séparation de la logique métier
+Projet académique réalisé pour renforcer la maîtrise de l’architecture logicielle, de la gestion des données et des bonnes pratiques de développement.
 
-Le traçage des opérations avec System.Diagnostics.Trace
+---
 
+## 🎯 Objectifs pédagogiques
 
-🏗️ Architecture
-L’application est organisée en plusieurs couches :
+- ✔️ Programmation Orientée Objet (POO)
+- ✔️ Manipulation des collections
+- ✔️ Séparation de la logique métier
+- ✔️ Gestion des exceptions personnalisées
+- ✔️ Traçage des opérations avec `System.Diagnostics.Trace`
 
+---
+
+## 🏗️ Architecture
+
+```text
 com-iuc-gestionutilisateurs
- ├── Dépendances
  ├── Controleur
  │    └── UserController.cs
  ├── Exception
@@ -34,139 +39,123 @@ com-iuc-gestionutilisateurs
  │    ├── Interface
  │    │    └── IUserService.cs
  │    └── UserServiceImpl.cs
- ├── view
+ ├── View
  │    ├── Program.cs
  │    └── UserView.cs
  ├── .gitattributes
  └── .gitignore
+```
 
-📌 Description des dossiers
-Model : Représentation des entités du domaine (Users).
+---
 
-Repository : Gestion de la persistance en mémoire (UserRepository).
+## 📂 Description des dossiers
 
-Service : Logique métier et validation (UserService).
+| Dossier     | Rôle |
+|------------|------|
+| Model      | Représentation des entités (`Users`) |
+| Repository | Gestion de la persistance en mémoire |
+| Service    | Logique métier et validation |
+| Controleur | Orchestration des opérations |
+| Exception  | Gestion des erreurs personnalisées |
+| View       | Interface console |
+| Program.cs | Point d’entrée principal |
 
-Controllers : Point d’entrée pour orchestrer les opérations (UserController).
+---
 
-Exception : Gestion des erreurs personnalisées (UserNotFoundException, ValidationException).
+## 🚀 Fonctionnalités
 
-Views : Interface console interactive (UserView).
+- ✅ Création d’un utilisateur
+- ✅ Modification d’un utilisateur
+- ✅ Recherche d’un utilisateur par identifiant
+- ✅ Affichage de la liste des utilisateurs
+- ✅ Suppression d’un utilisateur
+- ✅ Validation des données
+- ✅ Gestion des exceptions
+- ✅ Traçage des opérations avec Trace
 
-Program.cs : Point d’entrée principal.
+---
 
+## 🖥️ Exemple d’utilisation
 
+```csharp
+Console.WriteLine("\n--- GESTION DES UTILISATEURS ---");
 
-🚀 Fonctionnalités
+Console.WriteLine("\n 1. Créer un utilisateur");
+Console.WriteLine("\n 2. Lister les utilisateurs");
+Console.WriteLine("\n 3. Chercher un utilisateur par son identifiant");
+Console.WriteLine("\n 4. Modifier un utilisateur");
+Console.WriteLine("\n 5. Supprimer un utilisateur");
 
-✅ Création d’un utilisateur
+Console.WriteLine("\n 0. Quitter");
+Console.Write("\n Choix: ");
+```
 
-✅ Modification d’un utilisateur
+### Exemple d’exécution
 
-✅ Recherche d’un utilisateur par son identification
-
-✅ Affichage de la liste des utilisateurs
-
-✅ Suppression d’un utilisateur
-
-✅ Validation des données
-
-✅ Gestion des exceptions
-
-✅ Traçage des opérations avec Trace
-
-
-🖥️ Exemple d’utilisation
-Code
-System.Console.WriteLine("\n--- GESTION DES UTILISATEURS ---");
-
-System.Console.WriteLine("\n 1. Créer un utilisateur");
-System.Console.WriteLine("\n 2. Lister les utilisateurs");
-System.Console.WriteLine("\n 3. Chercher un utilisateur par son identifiant");
-System.Console.WriteLine("\n 4. Modifier un utilisateur");
-System.Console.WriteLine("\n 5. Supprimer un utilisateur");
-
-System.Console.WriteLine("\n 0. Quitter");
-System.Console.Write("\n Choix: ");
-
+```text
 1
 
- -- Création d'un utilisateur --
+-- Création d'un utilisateur --
 Nom: DJIOLEU
 Prenom: Wilfried
 Email: djioleuwilfried@mail.com
-     Utilisateur ' Wilfried ' créer avec succès.
 
+Utilisateur 'Wilfried' créé avec succès.
+```
 
+---
 
-🛠️ Technologies utilisées
+## 🛠️ Technologies utilisées
 
-Langage : C#
+- Langage : C#
+- Framework : .NET 8
+- Type : Application Console
+- Stockage : List<Users> (In-Memory)
+- Debug : System.Diagnostics.Trace
+- IDE : Visual Studio 2022
 
-Framework : .NET 8
+---
 
-Type d’application : Console
+## ⚙️ Installation
 
-Stockage : Collection List<Users> (In-Memory)
-
-Debug & Monitoring : System.Diagnostics.Trace
-
-IDE : Visual Studio 2022
-
-
-⚙️ Installation et exécution
-1️⃣ Cloner le projet
+```bash
 git clone https://github.com/DJIOLEUWilfried/com-iuc-gestionutilisateurs.git
+```
 
-2️⃣ Ouvrir avec Visual Studio 2022
+Ouvrir le projet dans Visual Studio puis exécuter.
 
-Ouvrir le fichier .sln
+---
 
-Restaurer les packages NuGet si nécessaire
+## 🔐 Bonnes pratiques
 
+- ✔️ Respect du principe SRP
+- ✔️ Architecture en couches
+- ✔️ Validation des données
+- ✔️ Exceptions personnalisées
+- ✔️ Versionnement Git
 
-🔐 Bonnes pratiques appliquées
+---
 
-Séparation des responsabilités (SRP)
+## ⚠️ Limites
 
-Architecture en couches
+- ❌ Pas de base de données
+- ❌ Pas d’authentification
+- ❌ Pas de tests unitaires
 
-Validation des données
+---
 
-Documentation
+## 📈 Améliorations futures
 
-Utilisation de Git pour le versionnement
+- 🔹 Intégration PostgreSQL
+- 🔹 Logger structuré
+- 🔹 Authentification JWT
+- 🔹 Tests unitaires
+- 🔹 Migration vers API REST ASP.NET Core
 
+---
 
-📌 Limites actuelles
+## 👨‍💻 Auteur
 
-❌ Pas de persistance des données
-
-❌ Pas d’authentification
-
-❌ Pas de gestion avancée des erreurs 
-
-
-
-📈 Améliorations futures
-
-🔹 Intégration d'une base de données postgreSQL
-
-🔹 Implémentation de la validation avancée
-
-🔹 Gestion avancée des erreurs 
-
-🔹 Traçage des opérations avec Logger
-
-🔹 Authentification JWT
-
-🔹 Tests unitaires
-
-
-
-👨‍💻 Auteur
-
-Wilfried DJIOLEU
-Développeur Backend C# / .NET - Java & Spring Boot
-📍 Douala, Cameroun
-
+**Wilfried DJIOLEU**  
+Développeur Backend C# / .NET & Java Spring Boot  
+Douala, Cameroun
